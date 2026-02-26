@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI-powered Automatic Timetable Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI-powered Automatic Timetable Generator</h1>
+
+    <!-- STEP 1 (Unchanged) -->
+    <div class="panel">
+      <h2>Step 1 — Basic Settings</h2>
+      <label>Days</label>
+      <input id="daysInput" value="Monday,
+      Tuesday,
+      Wednesday,
+      Thursday,
+      Friday,
+      Saturday"/>
+      
+      <label>Periods per day </label>
+      <input id="periodsInput" type="number" value="9" min="1" />
+
+      <label>Break</label>
+      <input id="breakSlot" type="number" value="2" />
+
+      <label>Lunch</label>
+      <input id="lunchSlot" type="number" value="5" /> 
+
+      <button id="applySettings">Apply Settings</button>
+    </div>
+
+    <!-- ⭐ STEP 1.5 — LAB SECTION -->
+    <div class="panel">
+      <h2>Step 2 — Add Labs</h2>
+
+      <label>Lab Name</label>
+      <select id="labName">
+        <option value="WEB TECHNOLOGY">WEB TECHNOLOGY</option>
+        <option value="COMPUTER NETWORKS">COMPUTER NETWORKS</option>
+      </select>
+
+      <label>Section</label>
+      <select id="labSection">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+
+      <label>Batch</label>
+      <select id="labBatch"></select>
+
+      <button id="addLabBtn">+ Add Lab</button>
+
+      <h3>Added Labs</h3>
+      <ul id="labList"></ul>
+    </div>
+
+    <!-- STEP 2 (Unchanged) -->
+    <div class="panel">
+      <h2>Step 3 — Add Subjects</h2>
+      <div id="subjectsForm"></div>
+      <div class="subjects-controls">
+        <button id="addSubject">+ Add Subject</button>
+        <button id="generate">Generate Timetable</button>
+        <button id="downloadPdf">Download PDF</button>
+      </div>
+      <div id="message" class="message"></div>
+    </div>
+
+    <!-- Output -->
+    <div class="panel">
+      <h2>Generated Timetable</h2>
+      <div id="timetableContainer"></div>
+    </div>
+
+    <footer></footer>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

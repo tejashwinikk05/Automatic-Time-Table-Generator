@@ -1,0 +1,40 @@
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Roboto,Arial;margin:16px;background:#f6f8fb;color:#111}
+.container{max-width:1100px;margin:0 auto}
+h1{font-size:20px;margin-bottom:8px}
+.panel{background:#fff;border-radius:8px;padding:12px;margin:12px 0;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.panel h2{font-size:16px;margin-bottom:8px;max-width:1100px}
+label{display:block;margin-top:8px;font-weight:600}
+input[type="text"], input[type="number"], select{width:100%;padding:8px;margin-top:6px;border:1px solid #ddd;border-radius:4px}
+.subject-row{display:flex;gap:8px;align-items:center;margin:8px 0}
+.subject-row input{flex:1;padding:6px}
+.subject-row .subHours{width:95px}
+.subject-row .removeBtn{background:#ef4444;color:white;border:0;padding:6px 8px;border-radius:4px;cursor:pointer}
+.subjects-controls{display:flex;gap:8px;margin-top:12px;align-items:center}
+button{background:#0f172a;color:#fff;padding:8px 12px;border-radius:6px;border:0;cursor:pointer}
+button[disabled]{opacity:.5;cursor:not-allowed}
+.message{color:#0b1220;margin-top:8px}
+.message.error{color:#b91c1c}
+.table{overflow:auto;margin-top:8px}
+table{border-collapse:collapse;width:100%}
+th, td{border:1px solid #e6e9ef;padding:8px;text-align:left;vertical-align:middle}
+th{background:#f1f5f9}
+.subject-card{padding:6px;border-radius:6px;background:#edf2ff}
+ul{padding-left:18px}
+.warning{color:#b91c1c;font-weight:700;margin-left:8px}
+
+/* remove spinner arrows for number inputs on most browsers (so user can type manually) */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* small screens */
+@media (max-width:700px){
+  .subject-row{flex-direction:column;align-items:stretch}
+  .subject-row .subHours{width:100%}
+}
